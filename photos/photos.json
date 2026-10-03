@@ -1,0 +1,48 @@
+{
+ "updated": "",
+ "categories": [
+  {
+   "slug": "school",
+   "name": "학교행사 · 축제 · 발표회",
+   "desc": "",
+   "count": 0
+  },
+  {
+   "slug": "sports",
+   "name": "체육대회 · 운동회",
+   "desc": "",
+   "count": 0
+  },
+  {
+   "slug": "apt",
+   "name": "아파트 행사",
+   "desc": "",
+   "count": 0
+  },
+  {
+   "slug": "water",
+   "name": "물놀이 · 에어바운스",
+   "desc": "",
+   "count": 0
+  },
+  {
+   "slug": "system",
+   "name": "무대 · 음향 · 조명",
+   "desc": "",
+   "count": 0
+  },
+  {
+   "slug": "rental",
+   "name": "천막 · 렌탈",
+   "desc": "",
+   "count": 0
+  },
+  {
+   "slug": "corp",
+   "name": "기업 · 기관 행사",
+   "desc": "",
+   "count": 0
+  }
+ ],
+ "photos": []
+}
