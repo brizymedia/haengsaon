@@ -58,6 +58,7 @@ EXAMPLES = [
     ('예) 제25회 광양 매화축제', '예) 2026 ○○초 가을 운동회'),
     ('예) 고흥군청 문화관광과', '예) ○○초등학교 교무실'),
     ('고흥군 녹동항 일원', '아산 신정호 야외음악당'),
+    ('2026 녹동바다불꽃축제 무대·음향 운영', '제3회 아산시 도시농업축제 음향 운영'),
     ('2026 녹동바다불꽃축제 무대음향 운영', '제3회 아산시 도시농업축제 음향 운영'),
     ('음향 · 조명 · LED · 무대', '음향 · 조명 · 천막 · 에어바운스'),
     ("spec:'전남 외 지역'", "spec:'충남 외 지역'"),
@@ -279,6 +280,9 @@ def write(name, s):
 def port(name, extra=None, out=None):
     s = open(os.path.join(SRC, name), encoding='utf-8').read()
     s = rep(s, common())
+    # 큰길이벤트 사이트의 검색엔진 소유확인 태그는 옮기지 않는다(이 사이트 것이 아님)
+    s = re.sub(r'\s*<!-- 네이버 서치어드바이저 소유확인 -->', '', s)
+    s = re.sub(r'\s*<meta name="(?:naver|google)-site-verification"[^>]*>', '', s)
     s = rep(s, nav())
     s = re.sub(r'\s*<a href="' + re.escape(GALLERY_PAGE) + r'"[^>]*>갤러리</a>', '', s) if GALLERY_PAGE != 'gallery.html' else s
     s = logo_fix(s)
