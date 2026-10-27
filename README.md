@@ -4,6 +4,13 @@
 
 제작: 큰길브리지 (주식회사 브리지미디어)
 
+## 행사 준비 블로그 (2026-10-28, HD기획 _blog 루틴 이식)
+
+- 주소 `blog/` — 글 원본 `_blog/posts/*.json`, 규칙 `_blog/GUIDE.md`(먼저 읽을 것), 지역 `_blog/regions.json`(= tools/make_pages.py AREAS), 사진 `_blog/photos.json`, 주제 `_blog/keywords.json`, 공식 출처 `_blog/sources.json`.
+- 쓰기: `node scripts/blog-plan.mjs` → 글 JSON → `node scripts/blog-check.mjs --new <파일>` 통과 → `node scripts/build-blog.mjs`(blog/ · sitemap · llms.txt · rss.xml).
+- 틀(머리글 · 메뉴 · 바닥글)은 notice.html 에서 빌린다. 메뉴를 바꾸면 notice.html 고치고 make_pages.py · build-blog.mjs 를 다시 돌린다.
+- 글 안 주소는 사이트 루트 기준 `/…` 로 쓰고 빌드가 상대 주소로 바꾼다. 전용 도메인을 붙이면 build-blog.mjs 의 `SITE` 만 고친다.
+
 ## 업무 도구 (2026-10-03, 큰길이벤트기획 기능을 옮김 — 바로기획 기준본)
 
 | 기능 | 주소 | 서버 |
